@@ -68,6 +68,10 @@
 
 </script>
 ```
+**如下图:**
+
+![ProgramProject](./images/1.png)
+
 ## 链式组件 - 纵向
 
  >需要指定需要指定`direction`为`vertical`
@@ -124,6 +128,9 @@
 
 </script>
 ```
+**如下图:**
+
+![ProgramProject](./images/2.png)
 
 ### Props
 

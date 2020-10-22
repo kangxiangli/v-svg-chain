@@ -16,8 +16,13 @@
         </v-svg-chain>
       </div>
       <!-- 始终展示tooltip end -->
+   
+     <div class="title">下面这种也是链式数据展示详情看<div class="block">https://www.npmjs.com/package/v-custom-steps</div></div>
+    <div class="content">
+      <vCustomSteps :data="originData"  align-center  style="height: 600px; " direction="horizontal"></vCustomSteps>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -77,7 +82,8 @@ export default {
 }
 </script>
 
-<style>
+<style  lang="postcss">
+
 html,body{
   width: 100%;
   height: 100%;
@@ -101,18 +107,19 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
 }
 .main{
   padding: 16px;
+  .title{
+    height: 30px;
+    line-height: 30px;
+    background: rgba(255,255,255,0.05);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-left: 2px solid #259ee3;
+    padding-left: 4px;
+    margin: 16px 0;
+  }
 }
-.title{
-  height: 30px;
-  line-height: 30px;
-  background: rgba(255,255,255,0.05);
-  font-size: 16px;
-  color: #fff;
-  font-weight: 600;
-  border-left: 2px solid #259ee3;
-  padding-left: 4px;
-  margin: 16px 0;
-}
+
 .block{
   color: coral;
   background: #867f7f61;

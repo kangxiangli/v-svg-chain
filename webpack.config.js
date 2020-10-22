@@ -14,12 +14,37 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(css|postcss)$/,
+        include: [path.resolve(__dirname, './src')],
+        exclude: /node_modules/,
         use: [
-          'vue-style-loader',
-          'css-loader'
-        ],
-      },
+            'vue-style-loader',
+            {
+                loader: 'css-loader',
+                options: {
+                    modules: false,
+                    importLoaders: 1
+                }
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    plugins: [
+                        require('postcss-import')(),
+                        require('postcss-url')(),
+                        require('autoprefixer')()
+                    ]
+                }
+            }
+        ]
+    },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'vue-style-loader',
+      //     'css-loader'
+      //   ],
+      // },
        {
         test: /\.vue$/,
         loader: 'vue-loader',
