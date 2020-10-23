@@ -164,4 +164,17 @@
 | default | 节点起始端内容插槽, 当前默认为圆。 `注意`：该组件为svg书写, slot内容`仅支持`svg标签元素, 其他标签不会生效！|
 
 
+### yarn 和npm使用
 
+```
+//npm
+npm i v-svg-chain
+//yarn
+yarn add v-svg-chain
+```
+```
+import Vue from 'vue'
+import vSvgChain from 'v-svg-chain'
+
+Vue.use(vSvgChain)
+```
